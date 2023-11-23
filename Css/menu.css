@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+/* Cambiar el color al menú y al submenú, cambiar la fuente de letra*/
+/*menu*/
+nav {
+    width: 100%;
+    /*ancho*/
+    height: 63px;
+    /*alto*/
+    background-color: rgb(76, 50, 110);
+    border-bottom: 7px solid rgb(238, 201, 159);
+    /*border 3 valores (grosor, tipo, color)*/
+    position: fixed;
+    /*elemento va a estar siempre fijo*/
+    display: flex; /*Hereda las propiedades del hijo*/
+    justify-content: center;
+}
+
+/*
+.contenedor => class
+#contenedor => id
+*/
+
+nav .contenedor {
+    width: 90%;
+    height: 63px;
+    position: absolute;
+    margin: 0;/*Saca cualquier margen interno*/
+}
+
+nav .contenedor .imgLogo {
+    width: 200px;
+    height: 63px;
+    float: left;
+    /*left = izquierda, right = derecha*/
+    box-sizing: border-box; /*el contenido de este div no debe exeder sus limites*/
+}
+
+nav .contenedor .imgLogo img {
+    max-height: 63px;/*restringe a la imagen a tener ese alto*/
+    float: center;
+    /*left = izquierda, right = derecha*/
+    box-sizing: border-box;
+}
+
+nav .contenedor .menu {
+    width: 100%;
+    height: 70px;
+    box-sizing: border-box;
+}
+
+nav .contenedor .menu ul {
+    list-style: none; /*saca las propiedades que la etiqueta trae por defecto*/
+    /*sacar cualquier estilo por defecto*/
+    box-sizing: border-box;
+}
+
+nav .contenedor .menu ul li {
+    float: left;
+    height: 63px;
+    width: 170px;
+    margin-right: 1px; /*margen para separar cada li*/
+    /*margen derecho de 1 px*/
+    line-height: 3;
+    text-align: center;
+}
+
+nav .contenedor .menu ul li:hover {
+    /*hover es por cada vez que pasa el puntero por cada li*/
+    background-color: rgb(84, 136, 170); /*cambia el color cuando pase el cursor*/
+    cursor: zoom-in;/*cambia el cursor a una lupa*/
+}
+
+nav .contenedor .menu ul li a {
+    text-decoration: none;/*saca las propiedades que la etiqueta trae por defecto*/
+    color: rgb(255, 255, 255);
+    /*font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;*/
+    font-family: 'Anton', sans-serif;
+    font-size: 22px;
+}
+
+nav .contenedor .menu ul li ul {
+    display: none;
+    /*ocultamos el menu*/
+}
+
+nav .contenedor .menu ul li:hover>ul {
+    /*cuando pasa el punto por el elemento li, mostramos el sub-menu*/
+    display: block;
+}
+
+nav .contenedor .menu ul li ul li {
+    height: 33px;
+    width: 300px;
+    background-color: rgb(84, 136, 170);
+    text-align: start;/*Coloca el texto sobre uno de los margenes*/
+    padding-left: 10px;/*espaciado izquierdo*/
+    line-height: 2;
+}
+
+nav .contenedor .menu ul li ul li a {
+    text-decoration: none;
+    color: rgb(228, 228, 228);
+    /*font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;*/
+    font-family: 'Amatic SC', cursive;
+    font-size:20px;
+}
+
+nav .contenedor .menu ul li ul li:hover {
+    background-color: rgb(126, 93, 148);
+    box-shadow: 16px 0px rgb(87, 56, 107);/*Hace una sombra(azul) al div se desplaza a la derecha, no se desplaza 0px, de hacerlo se desplazaría hacia arriba +1 hacia abajo -1*/
+}
